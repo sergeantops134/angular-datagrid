@@ -233,20 +233,20 @@ export declare interface RevogrHeader extends Components.RevogrHeader {}
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   inputs: ['canResize', 'colData', 'columnFilter', 'dimensionCol', 'groupingDepth', 'groups', 'parent', 'selectionStore', 'viewportCol'],
-  outputs: ['initialHeaderClick', 'headerResize', 'headerdblClick']
+  outputs: ['initialHeaderClick', 'headerresize', 'headerdblClick']
 })
 export class RevogrHeader {
   /**  */
   initialHeaderClick!: IRevogrHeaderComponent['initialHeaderClick'];
   /**  */
-  headerResize!: IRevogrHeaderComponent['headerresize'];
+  headerresize!: IRevogrHeaderComponent['headerresize'];
   /**  */
   headerdblClick!: IRevogrHeaderComponent['headerdblClick'];
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['initialHeaderClick', 'headerResize', 'headerdblClick']);
+    proxyOutputs(this, this.el, ['initialHeaderClick', 'headerresize', 'headerdblClick']);
   }
 }
 
